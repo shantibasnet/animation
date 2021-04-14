@@ -1,0 +1,105 @@
+ body {
+            background: green;
+        }
+  
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: white;
+            position: relative;
+            
+        }
+        
+        h1::before{
+            content: 'I LOVE';
+            left:120%
+            width:12%;
+            background: red;
+             animation: ani infinite 3s;
+            
+        }
+        @keyframes ani{
+            0% {
+                width: 20%;
+                background: blue;
+            }
+  
+            50% {
+                width: 32%;
+                background:orange;
+            }
+  
+            75% {
+                width: 90%;
+            }
+        }
+  
+        span::before {
+            content: "FOOD";
+            animation: animate infinite 3s;
+            padding-left: 10px;
+        }
+  
+        @keyframes animate {
+  
+            0% {
+                content: "READ";
+            }
+  
+            50% {
+                content: "SLEEP";
+            }
+  
+            75% {
+                content: "SING";
+            }
+        }
+.grid_container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: 80px;
+	margin-left: -100px;
+    font-family: 'Fjalla One';
+	margin-left: 5px;
+    justify-content: space-around;
+}
+
+.grid_container span1{
+    font-size: 50px;
+    display: inline-block;
+    position: relative;
+    text-shadow: 4px 6px 6px Brown;
+    transform: rotate(100deg) scale(0);
+    opacity: 0%;
+    bottom: -50px;
+    animation: texAni 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes texAni{
+    100%{
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        left:0;
+        bottom: 0;
+    }
+    
+    50%{
+        transform: rotate(10deg) scale(2);
+    }
+}
+
+
+
+
+
+
+
+
+  
+  
